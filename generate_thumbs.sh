@@ -22,7 +22,7 @@ for disk in ${rootdir} ; do
 				if [[ ! -d ${thumbdirc}/${channel}/${filename} ]] ; then
 					echo "Creating directory" ${thumbdirc}/${channel}/${filename}
 					mkdir -p ${thumbdirc}/${channel}/${filename}
-					echo "Createing thumbs for file" ${midiadirc}/${channel}/${file}
+					echo "Creating thumbs for file" ${midiadirc}/${channel}/${file}
 					ffmpeg -loglevel quiet -threads 1 -i ${midiadirc}/${channel}/${file} -vf fps=1 -s 854x480 ${thumbdirc}/${channel}/${filename}/${filename}"_%03d.jpg"
 				fi
 			else
