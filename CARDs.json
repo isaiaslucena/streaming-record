@@ -1,0 +1,190 @@
+{
+  "KTM_CARD01": [
+    {
+      "channel": "01",
+      "type": "RCA",
+      "state": "RJ",
+      "name": "BAND-RJ",
+      "sourcec": "/dev/video0",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-tv-brasil",
+      "disk": "/disks/videos",
+      "transc": true,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "09:00:00",
+          "end": "09:59:59"
+        },
+        {
+          "start": "12:00:00",
+          "end": "12:29:59"
+        },
+        {
+          "start": "19:00:00",
+          "end": "19:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    },
+    {
+      "channel": "02",
+      "type": "COAXIAL",
+      "state": "RJ",
+      "name": "COMBATE",
+      "sourcec": "/dev/video1",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-combate",
+      "savedisk": "/disks/disco1",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    }
+  ],
+  "KTM_CARD02": [
+    {
+      "channel": "03",
+      "type": "RCA",
+      "state": "RJ",
+      "name": "BAND",
+      "sourcec": "/dev/video2",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-band",
+      "savedisk": "/disks/disco2",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "02:29:59"
+        },
+        {
+          "start": "06:00:00",
+          "end": "08:59:59"
+        },
+        {
+          "start": "16:00:00",
+          "end": "20:39:59"
+        },
+        {
+          "start": "23:00:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    },
+    {
+      "channel": "04",
+      "type": "COAXIAL",
+      "state": "RJ",
+      "name": "BANDNEWS",
+      "sourcec": "/dev/video3",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-bandnews",
+      "savedisk": "/disks/disco1",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    }
+  ],
+  "KTM_CARD03": [
+    {
+      "channel": "05",
+      "type": "RCA",
+      "state": "RJ",
+      "name": "SPORTV2",
+      "sourcec": "/dev/video4",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-sportv2",
+      "savedisk": "/disks/disco1",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    },
+    {
+      "channel": "06",
+      "type": "COAXIAL",
+      "state": "RJ",
+      "name": "GNT",
+      "sourcec": "/dev/video5",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-gnt",
+      "savedisk": "/disks/disco3",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "02:00:00",
+          "end": "17:00:00"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    }
+  ],
+  "KTM_CARD04": [
+    {
+      "channel": "07",
+      "type": "RCA",
+      "state": "RJ",
+      "name": "RECORD",
+      "sourcec": "/dev/video6",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-record",
+      "savedisk": "/disks/disco3",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "05:00:00",
+          "end": "10:29:59"
+        },
+        {
+          "start": "11:50:00",
+          "end": "15:29:59"
+        },
+        {
+          "start": "17:50:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    },
+    {
+      "channel": "08",
+      "type": "COAXIAL",
+      "state": "RJ",
+      "name": "RECORDNEWS",
+      "sourcec": "/dev/video7",
+      "aspect": "16:9",
+      "feed": "rtmp://192.168.0.19:1935/live/ktm-recordnews",
+      "savedisk": "/disks/disco3",
+      "transc": false,
+      "transc_machine": "192.168.0.11",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "23:59:59"
+        }
+      ],
+      "transc_disk": "/sshfs/bmw"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+#!/bin/bash
+
+today=$(date +'%Y-%m-%d')
+tmonth=$(date '+%m')
+tmonthn=$(date '+%B')
+now=$(date +'%H:%M:%S')
+
+segtime="300"
+midiadir="/tv/MIDIA"
+audiodir="/tv/AUDIO"
+logdir="/tv/LOG"
+dirpath=${midiadir}/${tmonth}"-"${tmonthn}/${today}
+adirpath=${audiodir}/${tmonth}"-"${tmonthn}/${today}
+dirlpath=${logdir}/${tmonth}"-"${tmonthn}/${today}
+recpath="/tv/scripts/recmp4.sh"
+jsonfile="/tv/scripts/CARDs.json"
+
+for dvrs in $(jq keys ${jsonfile} | awk -F"[\"\"]" '{print $2}' | grep .) ; do
+	# echo ${dvrs}
+	arrn=$(($(jq ".${dvrs} | length" ${jsonfile})-1))
+	for dvrn in $(seq 0 ${arrn}) ; do
+		channel=$(jq --raw-output .${dvrs}[${dvrn}].channel ${jsonfile})
+		state=$(jq --raw-output .${dvrs}[${dvrn}].state ${jsonfile})
+		name=$(jq --raw-output .${dvrs}[${dvrn}].name ${jsonfile} | sed 's/ /-/g')
+		feed=$(jq --raw-output .${dvrs}[${dvrn}].feed ${jsonfile})
+		sourcec=$(jq --raw-output .${dvrs}[${dvrn}].sourcec ${jsonfile})
+		savedisk=$(jq --raw-output .${dvrs}[${dvrn}].savedisk ${jsonfile})
+		aspect=$(jq --raw-output .${dvrs}[${dvrn}].aspect ${jsonfile})
+		feed=$(jq --raw-output .${dvrs}[${dvrn}].feed ${jsonfile})
+		mtitle=${name}"_"${today}
+		destfile=${name}"_"${state}
+		finaldir=${savedisk}${dirpath}/${destfile}
+		finallogdir=${dirlpath}
+
+		transc=$(jq --raw-output .${dvrs}[${dvrn}].transc ${jsonfile})
+		asavedisk=$(jq --raw-output .${dvrs}[${dvrn}].transc_disk ${jsonfile})
+		afinaldir=${asavedisk}${adirpath}/${destfile}
+
+		echo "channel:" ${channel}
+		echo "state:" ${state}
+		echo "name:" ${name}
+		echo "source:" ${sourcec}
+		# echo "feed:" ${feed}
+		# echo "aspect:" ${aspect}
+		# echo "finaldir:" ${finaldir}
+		# echo "finaldirlog:" ${finallogdir}
+		# echo
+
+		if [ ! -d ${finaldir} ] ; then
+			mkdir -p ${finaldir}
+		fi
+
+		if [ ! -d ${finallogdir} ] ; then
+			mkdir -p ${finallogdir}
+		fi
+
+		# if [[ "${transc}" == 'true' ]] ; then
+		# 	if [[ ! -d ${afinaldir} ]] ; then
+		# 		mkdir -p ${afinaldir}
+		# 	fi
+
+		# 	echo ${name}-${state} "must transcribe!"
+		# 	echo "transcribe:" ${transc}
+		# 	echo "audio savedisk:" ${asavedisk}
+		# fi
+
+		echo
+
+		${recpath} ${sourcec} ${feed} ${mtitle} ${aspect} ${segtime} ${finaldir} ${destfile} ${finallogdir} ${transc} ${afinaldir} &
+	done
+	# echo
+done
+
+exit
