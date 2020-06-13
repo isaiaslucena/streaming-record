@@ -13,7 +13,7 @@ thumbdir="tv/THUMB"
 for disk in $(ls ${rootdir}); do
 	midiadirc=${rootdir}/${disk}/${midiadir}/${tmonth}"-"${tmonthn}/${today}
 	for channel in $(ls ${midiadirc}) ; do
-		 for file in $(ls ${midiadirc}/${channel}) ; do
+		for file in $(ls ${midiadirc}/${channel}) ; do
 			filename=$(echo ${file} | sed 's/.mp4//g')
 			fileuse=$(lsof ${midiadirc}/${channel}/${file} | tail -n 1 | awk '{print $2}')
 			thumbdirc=${rootdir}/${disk}/${thumbdir}/${tmonth}"-"${tmonthn}/${today}
