@@ -6,14 +6,12 @@ tmonthn=$(date '+%B')
 now=$(date +'%H:%M:%S')
 
 segtime="300"
-midiadir="/tv/MIDIA"
-audiodir="/tv/AUDIO"
+midiadir="/applications/record/files/tv/MIDIA"
 logdir="/tv/LOG"
 dirpath=${midiadir}/${tmonth}"-"${tmonthn}/${today}
-adirpath=${audiodir}/${tmonth}"-"${tmonthn}/${today}
 dirlpath=${logdir}/${tmonth}"-"${tmonthn}/${today}
-recpath="/tv/scripts/recmp4.sh"
-jsonfile="/tv/scripts/CARDs.json"
+recpath="/applications/record/scripts/recmp4.sh"
+jsonfile="/applications/record/scripts/CARDs.json"
 
 for dvrs in $(jq keys ${jsonfile} | awk -F"[\"\"]" '{print $2}' | grep .) ; do
 	# echo ${dvrs}
@@ -31,10 +29,6 @@ for dvrs in $(jq keys ${jsonfile} | awk -F"[\"\"]" '{print $2}' | grep .) ; do
 		destfile=${name}"_"${state}
 		finaldir=${savedisk}${dirpath}/${destfile}
 		finallogdir=${dirlpath}
-
-		transc=$(jq --raw-output .${dvrs}[${dvrn}].transc ${jsonfile})
-		asavedisk=$(jq --raw-output .${dvrs}[${dvrn}].transc_disk ${jsonfile})
-		afinaldir=${asavedisk}${adirpath}/${destfile}
 
 		echo "channel:" ${channel}
 		echo "state:" ${state}
@@ -66,7 +60,7 @@ for dvrs in $(jq keys ${jsonfile} | awk -F"[\"\"]" '{print $2}' | grep .) ; do
 
 		echo
 
-		${recpath} ${sourcec} ${feed} ${mtitle} ${aspect} ${segtime} ${finaldir} ${destfile} ${finallogdir} ${transc} ${afinaldir} &
+		${recpath} ${sourcec} ${feed} ${mtitle} ${aspect} ${segtime} ${finaldir} ${destfile} ${finallogdir} &
 	done
 	# echo
 done
