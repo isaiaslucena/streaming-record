@@ -1,6 +1,6 @@
 #!/bin/bash
 
-jsonfile="/tv/scripts/CARDs.json"
+jsonfile="/applications/record/scripts/CARDs.json"
 
 #kill the rec script
 killall recmp4.sh
