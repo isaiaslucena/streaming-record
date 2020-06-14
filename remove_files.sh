@@ -4,12 +4,12 @@ d1days=$(date -d '-25 days 03:00 BRT' '+%Y-%m-%d')
 d2days=$(date -d '-35 days 03:00 BRT' '+%Y-%m-%d')
 d3days=$(date -d '-31 days 03:00 BRT' '+%Y-%m-%d')
 
-d1midiadir="/disks/disco1/tv/MIDIA"
-d2midiadir="/disks/disco2/tv/MIDIA"
-d3midiadir="/disks/disco3/tv/MIDIA"
-d1thumbdir="/disks/disco1/tv/THUMB"
-d2thumbdir="/disks/disco2/tv/THUMB"
-d3thumbdir="/disks/disco3/tv/THUMB"
+d1midiadir="/applications/record/tv/MIDIA"
+d2midiadir="/applications/record/tv/MIDIA"
+d3midiadir="/applications/record/tv/MIDIA"
+d1thumbdir="/applications/record/tv/THUMB"
+d2thumbdir="/applications/record/tv/THUMB"
+d3thumbdir="/applications/record/tv/THUMB"
 
 todaydatelog=$(date +'%Y-%m-%d')
 nowtimelog=$(date +'%H:%M:%S')
