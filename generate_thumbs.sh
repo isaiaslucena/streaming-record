@@ -7,8 +7,8 @@ tmonthn=$(date '+%B')
 now=$(date +'%H:%M:%S')
 
 rootdir="/applications/record"
-midiadir="files/tv/MIDIA"
-thumbdir="files/tv/THUMB"
+midiadir="tv/MIDIA"
+thumbdir="tv/THUMB"
 
 for disk in ${rootdir} ; do
 	midiadirc=${rootdir}/${disk}/${midiadir}/${tmonth}"-"${tmonthn}/${today}
