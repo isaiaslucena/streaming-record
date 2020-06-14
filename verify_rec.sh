@@ -1,7 +1,7 @@
 #!/bin/bash
 
-botapi="287426206:AAGcrbY4c1JsTAi_hMQxiFPLj71Ow5RwYPk"
-chatid="-211934959"
+botapi="${APIKEY}"
+chatid="${CHATID}"
 
 recscript=$(pidof -x "recmp4.sh")
 
