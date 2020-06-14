@@ -27,7 +27,7 @@ for dvrs in $(jq keys ${jsonfile} | awk -F"[\"\"]" '{print $2}' | grep .) ; do
 		feed=$(jq --raw-output .${dvrs}[${dvrn}].feed ${jsonfile})
 		mtitle=${name}"_"${today}
 		destfile=${name}"_"${state}
-		finaldir=${savedisk}${dirpath}/${destfile}
+		finaldir=${savedisk}${dvrs}${dirpath}/${destfile}
 		finallogdir=${dirlpath}
 
 		echo "channel:" ${channel}
