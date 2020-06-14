@@ -5,7 +5,7 @@ tmonth=$(date '+%m')
 tmonthn=$(date '+%B')
 now=$(date +'%H:%M:%S')
 
-segtime="300"
+segtime="300" #five minutes
 midiadir="/tv/MIDIA"
 logdir="/tv/LOG"
 dirpath=${midiadir}/${tmonth}"-"${tmonthn}/${today}
