@@ -6,8 +6,8 @@ tmonthn=$(date '+%B')
 now=$(date +'%H:%M:%S')
 
 segtime="300"
-midiadir="/files/tv/MIDIA"
-logdir="/files/tv/LOG"
+midiadir="/tv/MIDIA"
+logdir="/tv/LOG"
 dirpath=${midiadir}/${tmonth}"-"${tmonthn}/${today}
 dirlpath=${logdir}/${tmonth}"-"${tmonthn}/${today}
 recpath="/applications/record/scripts/recmp4.sh"
