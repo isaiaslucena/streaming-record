@@ -23,13 +23,13 @@ for recDeviceDir in $(ls -d ${rootDir}/*) ; do
 			if [[ ${dateDirEpoch} -le ${daysBeforeEpoch} ]] ; then
 				currentMediaDir=${monthDir}/${dateDir}
 				currentThumbDir=${currentMediaDir//MIDIA/THUMB}
-				echo ${currentMediaDir}
-				echo ${currentThumbDir}
+				#echo ${currentMediaDir}
+				#echo ${currentThumbDir}
 				# echo "${dateDir}" "is less or equal" "${daysBeforeIso}"
-				echo "$(nowDateTime)" "- Copying MEDIA dir " ${currentMediaDir} "to remote server..." # >> "/var/log/remove_files.log"
-				rsync -e "ssh -p 2134" -R "${currentMediaDir}" root@serverclip.ddns.net:/
-				echo "$(nowDateTime)" "- Copying THUMB dir " ${currentThumbDir} "to remote server..." # >> "/var/log/remove_files.log"
-				rsync -e "ssh -p 2134" -R "${currentThumbDir}" root@serverclip.ddns.net:/
+				echo "$(nowDateTime)" "- Copying dir" "${currentMediaDir}" "to remote server..." # >> "/var/log/remove_files.log"
+				rsync -e "ssh -p 2134" -Rr "${currentMediaDir}" root@serverclip.ddns.net:/
+				#echo "$(nowDateTime)" "- Copying dir" ${currentThumbDir} "to remote server..." # >> "/var/log/remove_files.log"
+				#rsync -e "ssh -p 2134" -Rr "${currentThumbDir}" root@serverclip.ddns.net:/
 
 				# rm -rf ${midiaDir}/${monthDir}/${dateDir}
 
