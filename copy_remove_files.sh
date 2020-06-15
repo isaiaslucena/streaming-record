@@ -1,7 +1,7 @@
 #!/bin/bash
 
 nowDateTime() {
-	return "$(date +'%F_%X')"
+	echo "$(date +'%F_%X')"
 }
 
 daysBeforeIso=$(date -d '-1 days 03:00 BRT' '+%Y-%m-%d')
