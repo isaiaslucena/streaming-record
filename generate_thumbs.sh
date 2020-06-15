@@ -6,7 +6,7 @@ tmonth=$(date '+%m')
 tmonthn=$(date '+%B')
 now=$(date +'%H:%M:%S')
 
-rootdir="/applications/record"
+rootdir="/applications/record/files/REC01"
 midiadir="tv/MIDIA"
 thumbdir="tv/THUMB"
 
