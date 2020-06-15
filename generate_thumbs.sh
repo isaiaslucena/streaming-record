@@ -10,7 +10,7 @@ rootdir="/applications/record/files"
 midiadir="tv/MIDIA"
 thumbdir="tv/THUMB"
 
-for disk in ${rootdir} ; do
+for disk in $(ls ${rootdir}) ; do
 	midiadirc=${rootdir}/${disk}/${midiadir}/${tmonth}"-"${tmonthn}/${today}
 	for channel in $(ls ${midiadirc}) ; do
 		for file in $(ls ${midiadirc}/${channel}) ; do
