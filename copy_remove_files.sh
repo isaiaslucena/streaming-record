@@ -1,7 +1,7 @@
 #!/bin/bash
 
 nowDateTime() {
-	echo "$(date +'%F_%X')"
+	date +'%F_%X'
 }
 
 daysBeforeIso=$(date -d '-1 days 03:00 BRT' '+%Y-%m-%d')
@@ -12,7 +12,6 @@ midiaDir="/tv/MIDIA"
 thumbDir="/tv/THUMB"
 
 echo "$(nowDateTime)" "- Script Start" #>> "/var/log/remove_files.log"
-
 
 for recDevice in ${rootDir} ; do
 	monthsMediaDir=${rootDir}${recDevice}${midiaDir}
