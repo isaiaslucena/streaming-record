@@ -33,8 +33,10 @@ for recDeviceDir in $(ls -d ${rootDir}/*) ; do
 
 				# rm -rf ${midiaDir}/${monthDir}/${dateDir}
 
-				# echo "$(nowDateTime)" "- Removing" ${thumbDir}/${monthDir}/${dateDir} # >> "/var/log/remove_files.log"
-				# rm -rf ${thumbDir}/${monthDir}/${dateDir}
+				# echo "$(nowDateTime)" "- Removing" "${currentMediaDir}" # >> "/var/log/remove_files.log"
+				# rm -rf "${currentMediaDir}"
+				# echo "$(nowDateTime)" "- Removing" "${currentThumbDir}" # >> "/var/log/remove_files.log"
+				# rm -rf "${currentThumbDir}"
 			fi
 		done
 	done
