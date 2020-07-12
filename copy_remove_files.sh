@@ -27,9 +27,9 @@ for recDeviceDir in $(ls -d ${rootDir}/*) ; do
 				#echo ${currentThumbDir}
 				# echo "${dateDir}" "is less or equal" "${daysBeforeIso}"
 				echo "$(nowDateTime)" "- Copying dir" "${currentMediaDir}" "to remote server..." # >> "/var/log/remove_files.log"
-				rsync -e "ssh -p 2134" -Rru "${currentMediaDir}" root@serverclip.ddns.net:/
+				rsync -e "ssh -p 2134" -Rru --remove-source-files "${currentMediaDir}" root@serverclip.ddns.net:/
 				echo "$(nowDateTime)" "- Copying dir" ${currentThumbDir} "to remote server..." # >> "/var/log/remove_files.log"
-				rsync -e "ssh -p 2134" -Rru "${currentThumbDir}" root@serverclip.ddns.net:/
+				rsync -e "ssh -p 2134" -Rru --remove-source-files "${currentThumbDir}" root@serverclip.ddns.net:/
 
 				# rm -rf ${midiaDir}/${monthDir}/${dateDir}
 
