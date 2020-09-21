@@ -1,0 +1,146 @@
+{
+  "Rio_de_Janeiro": [
+    {
+      "name": "BANDNEWS",
+      "state": "RJ",
+      "stream": "http://evpp.mm.uol.com.br:1935/band/bandnewsfm_rj/playlist.m3u8",
+      "disk": "/disks/disco3",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "05:00:00",
+          "end": "23:59:59"
+        }
+      ]
+    },
+    {
+      "name": "CBN",
+      "state": "RJ",
+      "stream": "https://medias.sgr.globo.com/hls/aCBNRJ/aCBNRJ.m3u8",
+      "disk": "/disks/disco3",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "05:00:00",
+          "end": "23:59:59"
+        }
+      ]
+    },
+    {
+      "name": "JB-FM",
+      "state": "RJ",
+      "stream": "http://17973.live.streamtheworld.com:80/JBFMAAC_SC",
+      "disk": "/disks/disco2",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "08:00:00",
+          "end": "09:00:00"
+        },
+        {
+          "start": "13:00:00",
+          "end": "14:00:00"
+        }
+      ]
+    },
+    {
+      "name": "GLOBO",
+      "state": "RJ",
+      "stream": "https://medias.sgr.globo.com/hls/aRGloboRJ/aRGloboRJ.m3u8",
+      "disk": "/disks/disco3",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "00:00:00",
+          "end": "23:59:59"
+        }
+      ]
+    },
+    {
+      "name": "MEC-AM",
+      "state": "RJ",
+      "stream": "http://22722d.ha.azioncdn.net/hls-radio/STsEBCRMEC/index.m3u8",
+      "disk": "/disks/disco2",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "08:00:00",
+          "end": "09:00:00"
+        },
+        {
+          "start": "13:00:00",
+          "end": "14:00:00"
+        }
+      ]
+    },
+    {
+      "name": "MEC-FM",
+      "state": "RJ",
+      "stream": "http://22722d.ha.azioncdn.net/hls-radio/STsEBCECFM/index.m3u8",
+      "disk": "/disks/disco2",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "08:00:00",
+          "end": "09:00:00"
+        },
+        {
+          "start": "13:00:00",
+          "end": "14:00:00"
+        }
+      ]
+        },
+        {
+      "name": "TUPI",
+      "state": "RJ",
+      "stream": "http://8923.brasilstream.com.br/stream",
+      "disk": "/disks/disco2",
+      "kbps": 64,
+      "mono_channel": "-map_channel 0.0.0",
+      "until": null,
+      "rec": true,
+      "transc": false,
+      "transc_machine": "192.168.0.42",
+      "transc_time": [
+        {
+          "start": "08:00:00",
+          "end": "09:00:00"
+        },
+        {
+          "start": "13:00:00",
+          "end": "14:00:00"
+        }
+      ]
+    }
+  ]
+}
